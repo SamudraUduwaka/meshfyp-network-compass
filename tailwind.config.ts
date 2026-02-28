@@ -57,6 +57,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        glow: {
+          green: "hsl(var(--glow-green))",
+          purple: "hsl(var(--glow-purple))",
+        },
+        surface: {
+          elevated: "hsl(var(--surface-elevated))",
+        },
+        node: {
+          online: "hsl(var(--node-online))",
+          offline: "hsl(var(--node-offline))",
+          warning: "hsl(var(--node-warning))",
+        },
+      },
+      fontFamily: {
+        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
