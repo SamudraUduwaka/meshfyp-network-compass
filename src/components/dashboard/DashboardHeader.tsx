@@ -1,6 +1,10 @@
-import { Network, Signal } from "lucide-react";
+import { Network, Signal, Sun, Moon } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function DashboardHeader() {
+  const { theme, toggle } = useTheme();
+
   return (
     <header className="h-12 border-b border-border bg-card flex items-center justify-between px-4 shrink-0">
       <div className="flex items-center gap-3">
@@ -13,6 +17,11 @@ export default function DashboardHeader() {
         </span>
       </div>
       <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 text-xs font-mono">
+          <Sun className="h-3.5 w-3.5 text-muted-foreground" />
+          <Switch checked={theme === "dark"} onCheckedChange={toggle} />
+          <Moon className="h-3.5 w-3.5 text-muted-foreground" />
+        </div>
         <div className="flex items-center gap-1.5 text-xs font-mono text-node-online">
           <Signal className="h-3.5 w-3.5 animate-pulse-glow" />
           <span>CONNECTED</span>

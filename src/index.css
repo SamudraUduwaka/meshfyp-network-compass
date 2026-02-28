@@ -55,6 +55,52 @@
 
     font-family: 'Inter', system-ui, sans-serif;
   }
+
+  .light {
+    --background: 0 0% 97%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    --primary: 155 70% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 50% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 270 40% 90%;
+    --accent-foreground: 270 50% 30%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 10% 82%;
+    --input: 220 10% 88%;
+    --ring: 155 70% 35%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 15% 25%;
+    --sidebar-primary: 155 70% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 40% 92%;
+    --sidebar-accent-foreground: 270 50% 30%;
+    --sidebar-border: 220 10% 85%;
+    --sidebar-ring: 155 70% 35%;
+
+    --glow-green: 155 70% 35%;
+    --glow-purple: 270 50% 55%;
+    --surface-elevated: 0 0% 100%;
+    --node-online: 155 60% 35%;
+    --node-offline: 0 60% 50%;
+    --node-warning: 45 80% 45%;
+  }
 }
 
 @layer base {
