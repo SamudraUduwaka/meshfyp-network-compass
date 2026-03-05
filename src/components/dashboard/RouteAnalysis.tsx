@@ -1,6 +1,5 @@
 import { mockRoutes } from "@/data/mockNodes";
-import { ArrowRight, CheckCircle, AlertCircle, XCircle } from "lucide-react";
-
+import { ArrowRight, CheckCircle, AlertCircle, XCircle } from "lucide-react";import '@/styles/components/RouteAnalysis.css';
 const statusConfig = {
   active: { icon: CheckCircle, color: "text-node-online", bg: "bg-node-online/10", label: "Active" },
   backup: { icon: AlertCircle, color: "text-node-warning", bg: "bg-node-warning/10", label: "Backup" },

@@ -1,6 +1,7 @@
 import { Network, Signal, Sun, Moon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { useTheme } from "@/hooks/useTheme";
+import '@/styles/components/DashboardHeader.css';
 
 export default function DashboardHeader() {
   const { theme, toggle } = useTheme();

@@ -1,4 +1,5 @@
 import { mockNodes, SDNNode } from "@/data/mockNodes";
+import '@/styles/components/MapView.css';
 
 interface Props {
   selectedNodeId: string | null;

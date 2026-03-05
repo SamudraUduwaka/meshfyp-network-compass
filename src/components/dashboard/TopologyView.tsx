@@ -1,4 +1,5 @@
 import { mockNodes } from "@/data/mockNodes";
+import '@/styles/components/TopologyView.css';
 
 interface Props {
   selectedNodeId: string | null;

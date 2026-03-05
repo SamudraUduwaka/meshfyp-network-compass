@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Map, GitBranch, Server, MessageSquare, Route } from "lucide-react";
+import { Map, GitBranch, Server, MessageSquare, Route, MapPin } from "lucide-react";
 import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import NodeDetailsSidebar from "@/components/dashboard/NodeDetailsSidebar";
 import MapView from "@/components/dashboard/MapView";
@@ -8,8 +8,10 @@ import TopologyView from "@/components/dashboard/TopologyView";
 import ExtendedNodeView from "@/components/dashboard/ExtendedNodeView";
 import MessagingWindow from "@/components/dashboard/MessagingWindow";
 import RouteAnalysis from "@/components/dashboard/RouteAnalysis";
+import OfflineMapView from "@/components/dashboard/OfflineMapView";
 
 const tabs = [
+  { value: "offline-map", label: "Offline Map", icon: MapPin },
   { value: "map", label: "Map View", icon: Map },
   { value: "topology", label: "Topology", icon: GitBranch },
   { value: "nodes", label: "Nodes", icon: Server },
@@ -29,7 +31,7 @@ const Index = () => {
       <div className="flex-1 flex flex-col overflow-hidden">
         <DashboardHeader />
 
-        <Tabs defaultValue="map" className="flex-1 flex flex-col overflow-hidden">
+        <Tabs defaultValue="offline-map" className="flex-1 flex flex-col overflow-hidden">
           <div className="border-b border-border bg-card px-4">
             <TabsList className="bg-transparent h-10 gap-1">
               {tabs.map(tab => (
@@ -46,6 +48,9 @@ const Index = () => {
           </div>
 
           <div className="flex-1 overflow-hidden p-4">
+            <TabsContent value="offline-map" className="h-full m-0">
+              <OfflineMapView selectedNodeId={selectedNodeId} onSelectNode={setSelectedNodeId} />
+            </TabsContent>
             <TabsContent value="map" className="h-full m-0">
               <MapView selectedNodeId={selectedNodeId} onSelectNode={setSelectedNodeId} />
             </TabsContent>

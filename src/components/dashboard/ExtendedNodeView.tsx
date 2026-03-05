@@ -1,5 +1,6 @@
 import { mockNodes } from "@/data/mockNodes";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import '@/styles/components/ExtendedNodeView.css';
 
 interface Props {
   selectedNodeId: string | null;

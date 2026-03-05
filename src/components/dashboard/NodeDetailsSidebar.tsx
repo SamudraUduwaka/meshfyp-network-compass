@@ -1,5 +1,6 @@
 import { mockNodes, SDNNode } from "@/data/mockNodes";
 import { Activity, Wifi, WifiOff, AlertTriangle, Server, Router, Cpu, Monitor } from "lucide-react";
+import '@/styles/components/NodeDetailsSidebar.css';
 
 const statusIcon = (status: SDNNode["status"]) => {
   switch (status) {

@@ -1,6 +1,7 @@
 import { mockMessages, Message } from "@/data/mockNodes";
 import { Send, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import '@/styles/components/MessagingWindow.css';
 
 const typeStyles: Record<Message["type"], string> = {
   info: "border-l-primary text-primary",
